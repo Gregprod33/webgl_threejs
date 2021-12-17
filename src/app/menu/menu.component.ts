@@ -22,7 +22,7 @@ export class MenuComponent implements OnInit {
   }
 
 
-  constructor(public breakpointObserver: BreakpointObserver, private router: Router){}
+  constructor(public breakpointObserver: BreakpointObserver, private router:Router){}
 
   logo:any =  "../../assets/images/logo.png"
 

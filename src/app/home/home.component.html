@@ -1,4 +1,7 @@
-<button class="robotButton" (click) ="reload()" mat-fab color="warn">
+<div *ngIf="onCharge" class="preloader text-center mt-5 d-flex flex-column" >
+     <h1 class="charging">Charging...</h1>
+</div>
+<button *ngIf="!onCharge" class="robotButton" (click) ="reload()" mat-fab color="warn">
     <span class="mat-button-wrapper">
         <mat-icon>home</mat-icon>
     </span>

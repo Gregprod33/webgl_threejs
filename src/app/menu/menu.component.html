@@ -23,7 +23,7 @@
         
             <!-- <span class="menu-spacer"></span> -->
         <div class="nav-buttons col-md-4 text-end">
-            <button mat-button (click)="goToRobot()"> ACCUEIL </button>
+            <button mat-button (click)="goToRobot()">ROBOT</button>
             <button mat-button [matMenuTriggerFor]="decouvrir">DÉCOUVRIR</button>
             <button mat-button routerLink="liens"> LIENS </button> 
         </div>
@@ -32,7 +32,7 @@
 <mat-sidenav-container>
     <mat-sidenav #sidenav>
       <mat-nav-list>
-        <button (click)="goToRobot()" mat-button>ACCUEIL</button>
+        <button (click)="goToRobot()" mat-button>ROBOT</button>
         <button mat-button [matMenuTriggerFor]="decouvrir">DÉCOUVRIR</button>
         <button routerLink="liens" mat-button>LIENS</button>
         <a mat-list-item (click)="sidenav.toggle()"><i class="fas fa-times"></i></a>

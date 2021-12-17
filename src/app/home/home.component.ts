@@ -11,8 +11,10 @@ import { Router } from '@angular/router';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit, AfterViewInit {
+  onCharge:any = true;
+  preloader:any = "../../assets/images/preloader.gif";
   @ViewChild('canvas')
-
+  
   private canvasRef!: ElementRef;
   
   
@@ -206,6 +208,9 @@ export class HomeComponent implements OnInit, AfterViewInit {
   constructor(private router: Router) { }
 
   ngOnInit(): void { 
+    setTimeout(()=>{
+      this.onCharge = false;
+    },1100)
   }
 
   
@@ -215,7 +220,7 @@ export class HomeComponent implements OnInit, AfterViewInit {
       this.createScene();
       this.startRenderingLoop();
       this.createControls();
-   
+      
     
     setTimeout(() => {
       this.updaterobotButtonOpacity();
