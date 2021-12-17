@@ -1,0 +1,24 @@
+<div class="container">
+    <div class="row gx-5">
+        <div class="article col-12 col-md-9 p-5">
+            <h2><span>APPLICATION</span></h2>
+            <p>Ces dernières années, on a pu observer une croissance robuste et un intérêt croissant pour la technologie <span>WebGL</span>. Celle-ci offre une capacité vraiment étonnante de créer des pages web interactives, des jeux, des présentations, des applications et des outils. Le WebGL est devenu la technologie grâce à laquelle il est possible d’interagir en temps réel avec différents environnements directement dans votre navigateur.</p>
+
+            <h3><span>AVANTAGES:</span></h3>
+            <p>Auparavant, l'utilisation de la 3D dans le web passait par l'installation de plugin. WebGL a apporté la suppression de ces plugins ainsi qu'une standardisation de cette technologie: la norme OpenGL ES.</p>
+            <p>A noter quand même que l'essor de WebGL a été accentué par la mort de flash, technologie devenue obsolète dans l'évolution des navigateurs.</p>
+            <br/>
+            <h3><span>INCONVÉNIENTS:</span></h3>
+            <p>Certains utilisateurs ont des ordinateurs dont les performances d’affichage trop limitées pour pouvoir afficher de la 3D WebGL et préfèreront se tourner vers des plateformes 3D basées sur le cloudGaming par exemple (Nvidia GeForceNow , Shadow, Stadia Google etc...).</p>
+
+        </div>
+        <div class="col-md-3">
+            <app-sidemenupage></app-sidemenupage>
+        </div>
+    </div>
+    <div class="next-page">
+        <button mat-raised-button matRipple (click)="goPreviousPage()" [matRippleColor]="rippleColor" class="btn me-3">Retour</button>
+        <button mat-raised-button matRipple (click)="goNextPage()" [matRippleColor]="rippleColor" class="btn">Lire la suite</button>
+    </div>
+</div>
+

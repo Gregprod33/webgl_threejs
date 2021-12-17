@@ -1,0 +1,61 @@
+
+<div class="container">
+    <div class="row gx-5">
+        <div class="article col-12 col-md-9 p-5">
+            <h2><span>LIBRAIRIES :</span></h2>
+            <p>
+                Pour faciliter l'appréhension de cette API, il existe de nombreuses librairies:
+                BabylonJS, ThreeJS, SpiderGL, SceneJS, Unity, PixiJs(Moteur 2D WebGL), PhaserJS etc....
+                On parle de moteur 3D temps réel.
+            </p>
+            <p>
+                L'avantage de ces moteurs de rendu est qu'ils sont interprétable directement depuis le navigateur par l'intermédiaire de l'interface de programmation WebGL.
+                La plupart d'entre elles utilisent le langage Javascript hormis Unity qui est basée sur C# sur la plateforme .NET.
+            </p>
+            <br>
+            <div class="image text-center">
+                <img class="img-fluid max-width: 100%" style="width:617px; height:auto;" [src]="unity">
+            </div>
+            <br>
+            <p class="text-center">Lien vers le site de <a href="https://unity.com/fr" target="_blank">UNITY</a></p>
+            <br>
+            <div class="image text-center">
+                <img class="img-fluid max-width: 100%" style="width:617px; height:auto;" [src]="babylon">
+            </div>
+            <br>
+            <p class="text-center">Lien vers le site de <a href="https://www.babylonjs.com/" target="_blank">BABYLON.JS</a>
+            <br>
+            <div class="image text-center">
+                <img class="img-fluid max-width: 100%" style="width:617px; height:auto;" [src]="three">
+            </div>
+            <br>
+            <p class="text-center">Lien vers le site de <a href="https://threejs.org/" target="_blank">THREE.JS</a>
+            <br>
+            <br>
+            <br>
+            <p>
+                Ces bibliothèques vont permettre d'abstraire une grande quantité de code nécessaire au remplissage des canvas évitant ainsi de tout écrire à la main entrainant des lourdeurs et des problèmes de maintenabilité. Ce sont en réalité les même problématiques qu'avec le code pur et l'utilisation de frameworks web.
+            </p>
+            <p>
+                On peut noter par exemple la gestion du scrooling automatique (TileMap), la création des classes de façon simplifiée, la gestion des Sprites (ou lutin : éléments autre que le décor qui se meuvent à l'écran) ainsi que des interfaces de construction d'objets et de gestion de rendu.
+            </p>
+            <p>
+                On pourrait représenter cela en disant que WebGL est Microsoft Paint et que les bibliothèques sont des Photoshop !
+            </p>
+
+
+
+            
+            
+        
+    </div>
+        <div class="col-md-3">
+            <app-sidemenupage></app-sidemenupage>
+        </div>
+    </div>
+    <div class="next-page">
+        <button mat-raised-button matRipple (click)="goPreviousPage()" [matRippleColor]="rippleColor" class="btn me-3">Retour</button>
+        <button mat-raised-button matRipple (click)="goNextPage()" [matRippleColor]="rippleColor" class="btn">Lire la suite</button>
+    </div>
+</div>
+

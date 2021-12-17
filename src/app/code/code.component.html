@@ -1,0 +1,125 @@
+
+<div class="container">
+    <div class="row gx-5">
+        <div class="article col-12 col-md-9 p-5">
+            <h2><span>CODE WEBGL :</span></h2>
+            <p>WebGL est en réalité una api de pixélisation et non une api 3D.
+                Cette api ne s'intéresse en réalité qu'à deux choses: les coordonnées dans l'espace de projection (clipspace) et les couleurs.
+            </p>
+            <p>Le développeur WebGL devra donc fournir ces deux jeux de données.
+                Ces données sont représentées par des <span>shaders.</span></p>
+                <br>
+                <br>
+            <h3>LES SHADERS</h3>
+            <ul>
+                <li>Un shader de vertex qui va fournir l'information de positionnement (coordonnées)
+                    Ils sont exécutés une fois pour chaque vecteur donné au processeur graphique.
+                    Leur but est de transformer la position 3D de point dans l'espace virtuel en la coordonnée 2D à laquelle il apparait à l'écran.
+                    Le résultat de ces opérations est passé au fragment shader.
+                </li>
+                <br>
+                <li>Un shader de pixel(ou shader de fragment) qui va fournir les informations de couleurs.
+                    Ils calculent la couleur de chaque pixel.
+                </li>
+            </ul>
+            <p>Maintenant que nous connaissons les jeux de données à fournir dans notre script, comment dialoguer avec ces shaders...</p>
+            <br>
+            <br>
+            <h3>LES BUFFERS</h3>
+            <p>Les buffers sont des blocs de mémoire dans le GPU auquel les shaders peuvent accéder très    rapidement. Les buffers stockent les données nécessaires au rendu des shaders fournis.
+            WebGL autorise ces données à être uniquement de type float, vec2, vec3, vec4, mat2, mat3, mat4.
+                vec représente des vecteurs et mat des matrices.
+                Le chiffre caractérisant le vec indique le nombre de coordonnées qu'il possède.</p>
+            <p>Ex:</p>
+            <p><span>var red = vec3(1.0, 0.0, 0.0)</span></p>
+            <p><span>red.x = 1.0;</span></p>
+            <p><span>red.y = 0.0;</span></p>
+            <p><span>red.z = 0.0;</span></p>
+            <br>
+            <p>Ou bien un vec4 pour la couleur, les attributs représentant le r, g, b, a .
+                On parle ici de type dans le langage GLSL (GL Shading Language), langage de type C like.<p>
+            <br>
+            <p>Voici un exemple <span>webGL</span> pour rendre le dessin d'un triangle.</p>
+            <br>
+            <div class="code">
+            <iframe height="300" style="width: 100%;" scrolling="no" title="Untitled" src="https://codepen.io/Gregprod33/embed/dyVpwYL?default-tab=html" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+            See the Pen <a href="https://codepen.io/Gregprod33/pen/dyVpwYL">
+            Untitled</a> by Gregory Boes (<a href="https://codepen.io/Gregprod33">@Gregprod33</a>)
+            on <a href="https://codepen.io">CodePen</a>.
+            </iframe>
+            </div>
+            <br>
+            <p>On constate qu'il y a bien la balise canvas pour introduire le rendu.
+                En outre, on remarque la présence de deux scripts distincts pour le vertexShader et pour le fragmentShader.</p>
+            <br>
+            <p>Pour chaque rendu dans la balise canvas, on doit tout d'abord en préciser le contexte, c'est le rôle de la function getContext(). On peut lui passer un contexte 2d ou comme ici 'webgl'.
+             Ensuite, nous initialisons le triangle à l'aide des coordonnées de ses 3 sommets (vertices) et de leur couleur respective.</p>
+             <br>
+             <div class="image text-center mb-2">
+                <img class="img-fluid max-width: 100%" [src]="code1">
+            </div>
+            <br>
+            <p>Ici les coordonnées sont de type vec3 et les couleurs vec4.
+                Ensuite nous devons créer un buffer qui va servir à lier les shaders vertex et fragments.
+            </p>
+            <div class="image text-center mb-2">
+                <img class="img-fluid max-width: 100%" [src]="code2">
+            </div>
+            <br>
+            <p>Afin de lier ces shaders afin de les faire interagir, il faut faire un pont entre eux grâce à la création d'un programme :</p>
+            <br>
+            <div class="image text-center mb-2">
+                <img class="img-fluid max-width: 100%" [src]="code3">
+            </div>
+            <br>
+            <p>Ensuite il faut préciser les positions de nos shaders au programmes:</p>
+            <div class="image text-center mb-2">
+                <img class="img-fluid max-width: 100%" [src]="code4">
+            </div>
+            <br>
+            <p>Enfin, nous avons initialisé un triangle au début du script avec les coordonnées de ses sommets et leur couleur dans le même tableau. Donc il faut maintenant préciser au programme qui est qui :</p>
+            <br>
+            <div class="image text-center mb-2">
+                <img class="img-fluid max-width: 100%" [src]="code5">
+            </div>
+            <br>
+            <p>Enfin, nous nous occupons du rendu :</p>
+            <br>
+            <div class="image text-center mb-2">
+                <img class="img-fluid max-width: 100%" [src]="code6">
+            </div>
+            <br>
+            <p>
+                Voici la fonction de compilation : 
+            </p>
+            <br>
+            <div class="image text-center mb-2">
+                <img class="img-fluid max-width: 100%" [src]="code7">
+            </div>
+            <br>
+            <p>A titre de comparaison, voici le rendu d'un triangle grâce à la librairie three.js :</p>
+            <br>
+            <div class="image text-center mb-2">
+                <img class="img-fluid max-width: 100%" [src]="code8">
+            </div>
+
+
+
+
+
+
+
+        
+    </div>
+        <div class="col-md-3">
+            <app-sidemenupage></app-sidemenupage>
+        </div>
+    </div>
+    <div class="next-page">
+        <button mat-raised-button matRipple (click)="goPreviousPage()" [matRippleColor]="rippleColor" class="btn me-3">Retour</button>
+        <button mat-raised-button matRipple (click)="goNextPage()" [matRippleColor]="rippleColor" class="btn">Lire la suite</button>
+    </div>
+</div>
+
+
+

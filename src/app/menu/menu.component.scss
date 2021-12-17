@@ -1,0 +1,83 @@
+mat-toolbar, mat-toolbar-row {
+    height: 100px;
+}
+
+
+
+span {
+    color: white;
+}
+
+mat-toolbar-row{
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(255,165,0, 0.2);
+}
+
+
+.sidenav-logo{
+    display: none;
+}
+
+::ng-deep .mat-menu-style {
+    background: #283A56;
+    .mat-menu-item{
+        color: white;
+        &:hover, &:focus{
+            color: #ff9924;
+        }
+    } 
+  }
+
+  
+mat-nav-list button, .nav-buttons button{
+    display: block;
+    color: white;
+    &:hover, &:focus{
+        color: #ff9924;
+    }
+
+}
+
+.nav-buttons button{
+    display: inline;
+}
+
+i.fas {
+    color: #FF8300;
+
+    
+}
+
+.fa-bars{
+    font-size: 30px;
+}
+
+.mat-drawer{
+    background-color: #283A56;
+}
+
+@media (max-width: 768px){
+    .nav-buttons button{
+        display: none;
+    }
+
+    .sidenav-logo{
+        display: block;
+    }
+    
+    #content{
+        height:90vh;
+    }
+    .mat-toolbar-row{justify-content: space-between;}
+        
+    
+    #svg{
+        width: 130px;
+    }
+
+    
+}
+    
+
+
+

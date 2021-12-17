@@ -1,0 +1,54 @@
+
+<div class="container">
+    <div class="row gx-5">
+        <div class="article col-12 col-md-9 p-5">
+            <h2><span>EN DÉTAIL :</span></h2>
+            <p>Comme nous l'avons vu, au lieu de laisser la gestion des rendus au CPU de l'appareil dont les microprocésseurs fonctionnent en série, le WebGL préfère l'utilisation des microprocesseurs du GPU en parallèle permettant de gérer un grand nombre de calculs.</p>
+            <p>En effet, les applications graphiques nécessite le calcul de taches sur chaque pixel de l'écran soit plusieurs millions d'opérations toutes les secondes.</p>
+            <p>Le GPU est dédiées au taches graphiques, ces microprocesseurs dessinent des formes et et détermine quelle couleur dessine chaque pixel à l'intérieur de ces formes et ce en parallèle de manière incroyablement rapide.</p>
+            <br/>
+            <p>Principe du WebGL:</p>
+            <ul>
+                <li><p> Une matrice de points:</p> 
+                    <div class="matricep text-center">
+                        <img  class="img-fluid max-width: 100%" [src]="matricep" style="width:617px">
+                    </div>
+                    <br>
+                    <p>Imaginons un triangle dont les sommets sont représentés par ces 3 coordonnées spatiales (A: 0, 1,0,
+                        B: 0,0,1; C: 0,0,0).
+                        Il faut maintenant venir ajouter une autre matrice à celle-ci, la matrice modèle M.
+                    </p>
+                    <br>
+                </li>
+                <li><p>La matrice modèle:</p>
+                    <div class="matricem text-center">
+                        <img  class="img-fluid max-width: 100%" [src]="matricem" style="width:617px">
+                    </div>
+                    <br>
+                    <p>M va se charger du placement de notre triangle dans l'espace.
+                        Cette matrice sera ensuite complétée par la matrice V dite de Vue.</p>
+                </li>
+                <br>
+                <li><p>La matrice de vue:</p>
+                    <div class="matricev text-center">
+                        <img  class="img-fluid max-width: 100%" [src]="matricev" style="width:617px">
+                    </div>
+                    <br>
+                    <p>La matrice de vue représente en fait la position de la caméra dans l'espace.
+                        Contrairement à la matrice M (modèle) qui transforme directement les points du modèle, la matrice de vue déplace une caméra abstraite.  
+                        En réalité, la caméra reste en place et seul le reste de la scène bouge.</p>
+                </li>
+                <br>
+                <li>Enfin, la balise de projection P sera la représentation 2d du modèle 3d.</li>
+            </ul>
+            
+        </div>
+            <div class="col-md-3">
+                <app-sidemenupage></app-sidemenupage>
+            </div>
+    </div>
+    <div class="next-page">
+        <button mat-raised-button matRipple (click)="goPreviousPage()" [matRippleColor]="rippleColor" class="btn me-3">Retour</button>
+        <button mat-raised-button matRipple (click)="goNextPage()" [matRippleColor]="rippleColor" class="btn">Lire la suite</button>
+    </div>
+</div>

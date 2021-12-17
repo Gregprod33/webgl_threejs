@@ -1,0 +1,22 @@
+
+    <div class="card-wrapper">
+        <mat-card class="example-card">
+        <mat-card-header>
+            <mat-card-title>{{ link.name }} :</mat-card-title>
+            <mat-card-subtitle>
+            {{ link.category }}
+            </mat-card-subtitle>
+        </mat-card-header>
+        <img mat-card-image class="img-fluid max-width: 100%" src='{{ "../../assets/images/" + link.image + ".png" }}' alt="Angular Logo">
+        <mat-card-content id="card-2" [hidden]="!link.active">
+            {{link.content}}
+        </mat-card-content>
+        <mat-card-actions>
+            <button mat-mini-fab  color="accent" (click)="toggleShowDetails()">
+                <mat-icon>{{!link.active ? 'unfold_more' : 'unfold_less'}}</mat-icon>
+            </button>
+            <a mat-raised-button class="ms-2" href="{{ link.web }}" color="primary" target="_blank">LIEN</a>
+        </mat-card-actions>
+        </mat-card>   
+    </div>
+

@@ -1,0 +1,65 @@
+
+<div class="container">
+    <div class="row gx-5">
+        <div class="article col-12 col-md-9 p-5">
+            <h2><span>PRINCIPE :</span></h2>
+            <p>WebGL utilise les basiles Canvas HTML pour afficher le rendu image.</p>
+            <p>Ceci est rendu possible depuis l'introduction de canvas avec l'arrivée de HTML5 en 2016, c'est donc relativement récent (arrivée des balises audio, vidéo, article également).</p>
+            <p>Avant 2016, les jeux déjà présents en version web (MineCraft). Certains utilisaient le plugIn Flash Player pour tourner ou bien encore Unity3D ou Java.</p>
+            <p>A noter que la fabrication de jeux 2D web peut encore se faire de manière plus traditionnelle en codant dans le DOM sans l'utilisation de CANVAS.</p>
+            <p>Exemple de balise canvas basique avec texte alternatif en cas de non prise en charge du navigateur:</p>
+            <p>HTML:</p>
+            <div class="code">
+            <samp>
+    <pre>
+    &lt;canvas&gt; width="300" height="100">
+        Désolé, votre navigateur ne prend pas en charge &lt;canvas&gt;.
+    &lt;/canvas&gt;
+    </pre>
+            </samp>
+            </div>
+            <br/>            
+            <p>JavaScript:</p>       
+            <div class="code">
+            <samp>
+<pre class="code-js">
+    var canvas = document.querySelector('canvas');
+    var ctx = canvas.getContext('2d');
+    ctx.fillStyle = 'orange';
+    ctx.fillRect(10, 10, 100, 100);
+</pre>
+</samp>
+            </div>
+            <br/> 
+            <p>Résultat:</p>
+            <canvas #canvas> width="300" height="100">
+                Désolé, votre navigateur ne prend pas en charge canvas.
+            </canvas>
+            <p>Les balises canvas sont donc des toiles blanches dans lesquelles nous allons pouvoir dessiner et importer des éléments graphiques de manière programmatique.</p>
+            <p>Mais au lieu d'utiliser l'API de dessin fournie pour le canvas, on va pouvoir utiliser un API plus poussée (celle de WebGL) qui va notemment permettre au navigateur d'exploiter les ressources de la carte graphique de la machine pour effectuer des calculs graphiques, au lieu d'utiliser les ressources du CPU (processeur central). C'est ce que l'on appelle l'accélération matérielle.</p>
+            <br/>
+            <div class="image text-center mb-2">
+                <img class="img-fluid max-width: 100%" [src]="principe">
+            </div>
+
+            <br/>
+            <p>Pour une même animation graphique, celle créée avec WebGL sera donc optimisée: rendu plus rapide et plus fluide.
+            Afin de savoir si le navigateur supporte webGL, on peut se rendre sur:
+            <a href="http://get.webgl.org/"></a>
+            Si l'on ne voit pas le cube qui tourne, cela signifie certainement que les drivers de la carte graphiques ne sont pas à jour.
+            En effet, La plupart des navigateurs actuels prennent en charge le format WebGL excepté Opéra Mini:</p>
+
+            <div class="image img-fluid max-width: 100% image-caniuse text-center">
+                <img class="caniuse img-fluid max-width: 100%" style="width:617px; height:auto;" [src]="caniuse">
+            </div>
+        
+    </div>
+        <div class="col-md-3">
+            <app-sidemenupage class="sticky"></app-sidemenupage>
+        </div>
+    </div>
+    <div class="next-page">
+        <button mat-raised-button matRipple (click)="goPreviousPage()" [matRippleColor]="rippleColor" class="btn me-3">Retour</button>
+        <button mat-raised-button matRipple (click)="goNextPage()" [matRippleColor]="rippleColor" class="btn">Lire la suite</button>
+    </div>
+</div>

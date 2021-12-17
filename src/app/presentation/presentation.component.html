@@ -1,0 +1,38 @@
+<div class="container" >
+    <div class="row gx-5">
+        <div class="article col-12 col-md-9 p-5">
+            <h2><span>PRÉSENTATION</span></h2>
+            <p>WebGL est une API développée par Khronos Group permettant de créér des environnements 3D dans un navigateur web.</p>
+            <p>Khronos Group est un consortium de grandes entreprises (Apple, Google, Nvidia, Intel pour ne citer que les plus connues).</p>
+            <p>Cette API s'appuie sur l'utilisation d'OpenGL ES.</p>
+            <p>Donc WebGL propose des services permettant d'accéder à OpenGL ES (principe de l'API).</p>
+            <ul>
+                <li>L'Open GL(Open Graphics Library) est une librairie, un ensemble de fonctions de calculs d'images 2D ou 3D lancé par Silicon Graphics en 1992. Elle permet de déclarer la géométrie des objets sous forme de points, de vecteurs, de polygones, de bitmaps et de textures. OpenGL effectue ensuite des calculs de rendu pour l'affichage de l'image à l'écran en tenant compte de la distance, de l'orientation ainsi que des ombres, de la transparence et du cadrage.<br>
+                Ces opérations sont compilés et exécutés directement sur le GPU.
+                Ces microprocesseurs sont faits pour exécuter des tâches “graphiques”, ils dessinent des formes et déterminent quelle couleur dessine chaque pixel à l’intérieur de chaque forme.
+                Ils n’ont pas de fonctionnalités 3D intégrées (pour créer un cube, il faut définir tous ses points ainsi que la façon dont chacun d’entre eux va être rendu à l’écran), mais, de par leur architecture, ils dessinent ces pixels en parallèle de manière incroyablement rapide.
+                </li>
+                <li>
+                    Par exemple, la playstation utilise un dérivé d'Open GL ES nommé PSGL.
+                    L'Open GL ES (Open Graphics Library for Embedded System) dérivée d'Open GL ajoute une capacité multiplateforme permettant son utilisation sur mobiles, consoles de jeux portables, assistants personnels et lecteurs multimedia.
+                </li>
+            </ul>
+            <p>
+                Il existe cependant de nombreuses différences entre la librairie Open GL et l'API Web GL.
+                Alors que la première utilise le langage C et comprend de nombreuses options de configuration,
+                la deuxième est codée en javascript et plus restreinte en termes d'options de rendu. D'autres différences telles que la performance et le domaine applicatif sont significatives.
+                Pour en savoir plus, lire l'article suivant:
+                <span><a href="#">OpenGL vs WebGL</a></span>
+            </p>
+
+            
+
+        </div>
+        <div class="col-md-3">
+            <app-sidemenupage></app-sidemenupage>
+        </div>
+    </div>
+    <div class="next-page">
+        <button mat-raised-button matRipple (click)="goNextPage()" [matRippleColor]="rippleColor" class="btn">Lire la suite</button>
+    </div>
+</div>

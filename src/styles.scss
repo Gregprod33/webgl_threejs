@@ -1,0 +1,151 @@
+@use "@material/card";
+@include card.core-styles;
+
+html, body {
+    background-color: #141D2B;   
+}
+body { margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif; 
+    overflow: hidden; max-width: 100%; min-height: 100vh;
+}
+
+h2{
+    color: #ff9924;
+}
+
+
+// ::-webkit-scrollbar, *::-webkit-scrollbar { display: none; }
+
+.container{
+    margin-top: 100px;
+    padding: 0px !important; 
+    margin-bottom: 100px;
+    
+    
+    .article {
+        background-color: #111927;
+        border: 1px solid rgba(255,165,0, 0.2);
+
+        h3, span{
+            color: #ff9924;
+        }
+
+        p, li{
+            color: #CAD2E2;
+            font-size: 15px;
+            text-align: justify;
+        }
+        a{
+            text-decoration: none;
+            color: #ff9924;
+        }
+
+        samp, pre{
+            font-size: 14px;
+            color: orange;
+        }
+        
+        pre{
+            margin-bottom: 0px;
+            margin-top: 15px;
+        }
+        
+        .code{
+            border: 1px solid orange;
+            margin-bottom: 20px;
+        }
+        
+        .code-js{
+            margin-bottom: 20px;
+        }
+        
+        .image-caniuse{
+            margin: 30px 0px 30px 0px;
+        }
+    }
+}
+
+.btn {
+    overflow: hidden;
+}
+
+
+
+
+
+
+.mat-button:hover, .mat-list-item:hover{
+    color: #ff9924;
+}
+
+.mat-button-focus-overlay{
+    background-color: none;
+}
+
+.next-page{
+    margin-top: 30px;
+}
+.mat-flat-button, .mat-raised-button, .mat-fab, .mat-mini-fab {
+    background-color: #283A56;
+    color: white;
+
+    &:hover{
+        background-color: #ff9924;
+    }
+}
+
+
+.sidemenupage{
+    
+    position: sticky;
+    position: -webkit-sticky;
+    top: 100px;
+    text-align: center;
+    width: 100%;
+    background-color: #111927;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid rgba(255,165,0, 0.2);
+
+    .item-container {
+        text-align: center;
+        margin: 8px 0px 8px 0px;
+        width: 90%;
+        background-color: #141D2B;
+
+        a {
+            display: inline-block;
+            color: white;
+            text-decoration: none;
+            padding: 10px;
+            &:hover{
+                color: #ff9924;
+            }
+        }
+    }  
+}
+
+
+
+.sticky{
+    position: sticky;
+    top: 0;
+}
+
+.mat-sidenav-content{
+    background-color: #141D2B;
+    
+}
+
+
+
+@media (max-width: 540px){
+    .container{
+        margin-top: 0px;
+        border: none;
+    }
+    .next-page{
+        margin-left: 20px;
+    }
+}
