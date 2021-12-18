@@ -1,16 +1,12 @@
-samp, pre{
+    .image {
+        border: 1px orange solid;
+        background-color: #283A56;
+    }
+    pre{
         font-size: 14px;
         color: orange;
-    }
-    
-    pre{
         margin-bottom: 0px;
         margin-top: 15px;
-    }
-    
-    .code{
-        border: 1px solid orange;
-        margin-bottom: 20px;
     }
     
 

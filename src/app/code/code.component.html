@@ -55,52 +55,76 @@
             <p>Pour chaque rendu dans la balise canvas, on doit tout d'abord en préciser le contexte, c'est le rôle de la function getContext(). On peut lui passer un contexte 2d ou comme ici 'webgl'.
              Ensuite, nous initialisons le triangle à l'aide des coordonnées de ses 3 sommets (vertices) et de leur couleur respective.</p>
              <br>
-             <div class="image text-center mb-2">
-                <img class="img-fluid max-width: 100%" [src]="code1">
+             <div class="image mb-2">
+                <!-- <img class="img-fluid max-width: 100%" [src]="code1"> -->
+                <pre>
+                    <code>{{code1}}</code>
+                </pre>
             </div>
             <br>
             <p>Ici les coordonnées sont de type vec3 et les couleurs vec4.
                 Ensuite nous devons créer un buffer qui va servir à lier les shaders vertex et fragments.
             </p>
-            <div class="image text-center mb-2">
-                <img class="img-fluid max-width: 100%" [src]="code2">
+            <div class="image mb-2">
+                <!-- <img class="img-fluid max-width: 100%" [src]="code2"> -->
+                <pre>
+                    <code>{{code2}}</code>
+                </pre>
             </div>
             <br>
             <p>Afin de lier ces shaders afin de les faire interagir, il faut faire un pont entre eux grâce à la création d'un programme :</p>
             <br>
-            <div class="image text-center mb-2">
-                <img class="img-fluid max-width: 100%" [src]="code3">
+            <div class="image mb-2">
+                <!-- <img class="img-fluid max-width: 100%" [src]="code3"> -->
+                <pre>
+                    <code>{{code3}}</code>
+                </pre>
             </div>
             <br>
             <p>Ensuite il faut préciser les positions de nos shaders au programmes:</p>
-            <div class="image text-center mb-2">
-                <img class="img-fluid max-width: 100%" [src]="code4">
+            <div class="image mb-2">
+                <!-- <img class="img-fluid max-width: 100%" [src]="code4"> -->
+                <pre>
+                    <code>{{code4}}</code>
+                </pre>
             </div>
             <br>
             <p>Enfin, nous avons initialisé un triangle au début du script avec les coordonnées de ses sommets et leur couleur dans le même tableau. Donc il faut maintenant préciser au programme qui est qui :</p>
             <br>
-            <div class="image text-center mb-2">
-                <img class="img-fluid max-width: 100%" [src]="code5">
+            <div class="image mb-2">
+                <!-- <img class="img-fluid max-width: 100%" [src]="code5"> -->
+                <pre>
+                    <code>{{code5}}</code>
+                </pre>
             </div>
             <br>
             <p>Enfin, nous nous occupons du rendu :</p>
             <br>
-            <div class="image text-center mb-2">
-                <img class="img-fluid max-width: 100%" [src]="code6">
+            <div class="image mb-2">
+                <!-- <img class="img-fluid max-width: 100%" [src]="code6"> -->
+                <pre>
+                    <code>{{code6}}</code>
+                </pre>
             </div>
             <br>
             <p>
                 Voici la fonction de compilation : 
             </p>
             <br>
-            <div class="image text-center mb-2">
-                <img class="img-fluid max-width: 100%" [src]="code7">
+            <div class="image mb-2">
+                <!-- <img class="img-fluid max-width: 100%" [src]="code7"> -->
+                <pre>
+                    <code>{{code7}}</code>
+                </pre>
             </div>
             <br>
-            <p>A titre de comparaison, voici le rendu d'un triangle grâce à la librairie three.js :</p>
+            <p>A titre de comparaison, voici le rendu d'un triangle grâce à la librairie <span>three.js </span>:</p>
             <br>
-            <div class="image text-center mb-2">
-                <img class="img-fluid max-width: 100%" [src]="code8">
+            <div class="image mb-2">
+                <!-- <img class="img-fluid max-width: 100%" [src]="code8"> -->
+                <pre>
+                    <code>{{code8}}</code>
+                </pre>
             </div>
 
 
