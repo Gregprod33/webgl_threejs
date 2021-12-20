@@ -12,13 +12,13 @@
                 <br>
             <h3>LES SHADERS</h3>
             <ul>
-                <li>Un shader de vertex qui va fournir l'information de positionnement (coordonnées)
+                <li>Un <span>shader de vertex</span> qui va fournir l'information de positionnement (coordonnées)
                     Ils sont exécutés une fois pour chaque vecteur donné au processeur graphique.
                     Leur but est de transformer la position 3D de point dans l'espace virtuel en la coordonnée 2D à laquelle il apparait à l'écran.
-                    Le résultat de ces opérations est passé au fragment shader.
+                    Le résultat de ces opérations est passé au shader de pixel.
                 </li>
                 <br>
-                <li>Un shader de pixel(ou shader de fragment) qui va fournir les informations de couleurs.
+                <li>Un <span>shader de pixel</span>(ou shader de fragment) qui va fournir les informations de couleurs.
                     Ils calculent la couleur de chaque pixel.
                 </li>
             </ul>
@@ -52,7 +52,7 @@
             <p>On constate qu'il y a bien la balise canvas pour introduire le rendu.
                 En outre, on remarque la présence de deux scripts distincts pour le vertexShader et pour le fragmentShader.</p>
             <br>
-            <p>Pour chaque rendu dans la balise canvas, on doit tout d'abord en préciser le contexte, c'est le rôle de la function getContext(). On peut lui passer un contexte 2d ou comme ici 'webgl'.
+            <p>Pour chaque rendu dans la balise canvas, on doit tout d'abord en préciser le contexte, c'est le rôle de la fonction getContext(). On peut lui passer un contexte 2d ou comme ici 'webgl'.
              Ensuite, nous initialisons le triangle à l'aide des coordonnées de ses 3 sommets (vertices) et de leur couleur respective.</p>
              <br>
              <div class="image mb-2">
@@ -72,7 +72,7 @@
                 </pre>
             </div>
             <br>
-            <p>Afin de lier ces shaders afin de les faire interagir, il faut faire un pont entre eux grâce à la création d'un programme :</p>
+            <p>Afin de lier ces shaders pour les faire interagir, il faut faire un pont entre eux grâce à la création d'un programme :</p>
             <br>
             <div class="image mb-2">
                 <!-- <img class="img-fluid max-width: 100%" [src]="code3"> -->
@@ -81,7 +81,7 @@
                 </pre>
             </div>
             <br>
-            <p>Ensuite il faut préciser les positions de nos shaders au programmes:</p>
+            <p>Ensuite il faut préciser les positions de nos shaders au programme:</p>
             <div class="image mb-2">
                 <!-- <img class="img-fluid max-width: 100%" [src]="code4"> -->
                 <pre>
