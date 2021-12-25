@@ -77,6 +77,7 @@ export class HomeComponent implements OnInit, AfterViewInit {
 
   private robotButton!: HTMLDivElement;
 
+ 
 
   private createControls = () => {
     const labelRenderer = new CSS2DRenderer();
@@ -107,6 +108,7 @@ export class HomeComponent implements OnInit, AfterViewInit {
       box.getCenter(this.model.position); // this re-sets the mesh position
       this.model.position.multiplyScalar(-1);
       this.scene.add(this.model);
+      this.onCharge = false;
     });
     //*Camera
     let aspectRatio = this.getAspectRatio();
@@ -208,9 +210,7 @@ export class HomeComponent implements OnInit, AfterViewInit {
   constructor(private router: Router) { }
 
   ngOnInit(): void { 
-    setTimeout(()=>{
-      this.onCharge = false;
-    },1100)
+    
   }
 
   
@@ -220,12 +220,12 @@ export class HomeComponent implements OnInit, AfterViewInit {
       this.createScene();
       this.startRenderingLoop();
       this.createControls();
-      
-    
+       
     setTimeout(() => {
       this.updaterobotButtonOpacity();
       this.updateScreenPosition();
     }, 4000);
+    
   }  
   
   reload(){
